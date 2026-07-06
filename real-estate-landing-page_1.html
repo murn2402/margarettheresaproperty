@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Margaret Theresa, Prime Residences & Commercial, KLCC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#4A2536;
+    --plum-deep:#2E1620;
+    --rosegold:#C9A15A;
+    --rosegold-light:#E8C98A;
+    --rose-dust:#B76E79;
+    --blush:#F0C4C0;
+    --blush-light:#F8DEDC;
+    --berry:#C6395A;
+    --ivory:#FBF1EE;
+    --ivory-dim:#F3E3DE;
+    --ink:#2E1620;
+    --ink-soft:#7A5F66;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Karla', sans-serif;
+    background:var(--ivory);
+    color:var(--ink);
+    font-weight:300;
+  }
+  h1,h2,h3{
+    font-family:'Prata', serif;
+    font-weight:400;
+    margin:0;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 28px;}
+  .small-caps{
+    text-transform:uppercase;letter-spacing:0.22em;font-size:12px;font-weight:500;
+  }
+
+  /* NAV */
+  .nav{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:26px 28px;max-width:1100px;margin:0 auto;
+  }
+  .brand{
+    font-family:'Prata',serif;font-size:23px;font-weight:400;
+    color:var(--plum);letter-spacing:0.06em;
+  }
+  .brand span{color:var(--rosegold);}
+  .nav a.cta{
+    background:var(--plum);color:var(--ivory);
+    padding:11px 22px;
+    font-size:12px;font-weight:500;text-decoration:none;
+    text-transform:uppercase;letter-spacing:0.14em;
+    border:1px solid var(--plum);
+  }
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(160deg, var(--blush-light), var(--blush));
+    color:var(--plum);
+    padding:20px 28px 96px;
+    position:relative;
+  }
+  .frame-rule{
+    max-width:1100px;margin:0 auto;
+    border-top:1px solid var(--plum);
+    border-bottom:1px solid rgba(74,37,54,0.35);
+    height:3px;
+  }
+  .hero-inner{max-width:1100px;margin:0 auto;position:relative;padding-top:56px;}
+  .nav-photo{
+    width:44px;height:44px;border-radius:50%;
+    border:1.5px solid var(--rosegold);
+    background:linear-gradient(135deg,var(--blush),var(--blush-light));
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .nav-photo span{
+    font-family:'Prata',serif;font-size:8.5px;
+    color:var(--plum);text-align:center;line-height:1.2;
+    text-transform:uppercase;letter-spacing:0.03em;
+  }
+  .nav-left{display:flex;align-items:center;gap:12px;}
+  .nav-id{display:flex;flex-direction:column;gap:2px;}
+  .ren-badge{
+    border:1px solid var(--rosegold);color:var(--plum);
+    padding:2px 9px;font-size:10.5px;font-weight:500;
+    letter-spacing:0.06em;text-transform:uppercase;
+    background:rgba(251,241,238,0.6);width:fit-content;
+  }
+  .eyebrow{
+    color:var(--rose-dust);
+    margin-bottom:20px;
+  }
+  .hero h1{
+    font-size:clamp(36px,5.2vw,58px);
+    line-height:1.1;
+    max-width:700px;
+    
+  }
+  .hero p{
+    font-family:'Karla',sans-serif;
+    font-size:16.5px;line-height:1.7;font-weight:300;
+    max-width:520px;
+    color:rgba(74,37,54,0.8);
+    margin-top:22px;
+  }
+  .hero-actions{margin-top:34px;display:flex;gap:16px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--berry);color:var(--ivory);
+    padding:15px 28px;
+    font-weight:500;text-decoration:none;font-size:13px;
+    text-transform:uppercase;letter-spacing:0.14em;
+    display:inline-block;border:1px solid var(--berry);
+  }
+  .btn-ghost{
+    color:var(--plum);border:1px solid rgba(74,37,54,0.4);
+    padding:15px 28px;text-decoration:none;font-size:13px;font-weight:500;
+    text-transform:uppercase;letter-spacing:0.14em;
+    display:inline-block;
+  }
+
+  /* SECTION HEADS */
+  .section{padding:76px 28px;}
+  .section-head{max-width:620px;margin-bottom:44px;}
+  .section-head .small-caps{color:var(--rose-dust);}
+  .section-head h2{font-size:32px;color:var(--plum);line-height:1.2;margin-top:8px;}
+  .section-head p{color:var(--ink-soft);margin-top:12px;font-size:15px;line-height:1.7;}
+
+  .portfolio-group{margin-bottom:52px;}
+  .portfolio-group:last-child{margin-bottom:0;}
+  .portfolio-group h3{
+    font-size:20px;color:var(--plum);margin-bottom:20px;
+    padding-bottom:10px;border-bottom:1px solid var(--rosegold);
+    display:inline-block;
+  }
+
+  /* LISTINGS */
+  .listings{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  @media (max-width:860px){.listings{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.listings{grid-template-columns:1fr;}}
+  .card{
+    background:#fff;
+    border:1px solid var(--rosegold);
+    padding:6px;
+  }
+  .card-inner{border:1px solid rgba(14,59,46,0.18);}
+  .card-photo{
+    height:150px;
+    background:linear-gradient(135deg,#C6395A,#2E1620);
+    position:relative;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .card-photo span{color:rgba(251,241,238,0.55);font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;}
+  .card-body{padding:20px 18px 22px;}
+  .card-tags{display:flex;gap:8px;margin-bottom:12px;}
+  .tag-chip{
+    font-size:10.5px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;
+    padding:4px 9px;border:1px solid currentColor;
+  }
+  .tag-chip.sale{color:var(--rose-dust);background:rgba(183,110,121,0.1);}
+  .tag-chip.rent{color:var(--berry);background:rgba(198,57,90,0.08);}
+  .card-body h3{font-size:19px;color:var(--plum);font-weight:400;}
+  .card-meta{
+    display:flex;gap:14px;margin-top:10px;
+    font-size:12.5px;color:var(--ink-soft);letter-spacing:0.02em;
+  }
+  .card-price{
+    margin-top:14px;font-family:'Prata',serif;
+    font-size:23px;color:var(--berry);font-weight:400;
+  }
+
+  /* TRUST STRIP */
+  .trust{background:var(--ivory-dim);padding:52px 28px;border-top:1px solid var(--rosegold);border-bottom:1px solid var(--rosegold);}
+  .trust-inner{
+    max-width:1100px;margin:0 auto;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  }
+  @media (max-width:760px){.trust-inner{grid-template-columns:1fr 1fr;}}
+  .trust-item{text-align:center;}
+  .trust-item h3{font-size:28px;color:var(--plum);}
+  .trust-item p{font-size:12.5px;color:var(--ink-soft);margin-top:6px;letter-spacing:0.03em;}
+
+  /* FORM */
+  .form-section{background:var(--plum);color:var(--ivory);padding:80px 28px;}
+  .form-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:60px;}
+  @media (max-width:820px){.form-inner{grid-template-columns:1fr;}}
+  .form-inner h2{font-size:32px;color:var(--ivory);line-height:1.2;margin-top:8px;}
+  .form-inner .small-caps{color:var(--rosegold-light);}
+  .form-inner p.lead-copy{color:var(--ivory-dim);font-size:15.5px;line-height:1.7;margin-top:16px;max-width:420px;font-weight:300;}
+  .contact-line{margin-top:28px;font-size:14px;color:var(--rosegold-light);}
+  .contact-line a{text-decoration:underline;}
+
+  form{display:grid;gap:15px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:15px;}
+  @media (max-width:480px){.row2{grid-template-columns:1fr;}}
+  label{
+    font-size:11px;color:var(--rosegold-light);display:block;margin-bottom:7px;
+    text-transform:uppercase;letter-spacing:0.1em;
+  }
+  input,select,textarea{
+    width:100%;background:rgba(251,241,238,0.06);
+    border:1px solid rgba(251,241,238,0.3);
+    color:var(--ivory);padding:12px 13px;font-size:14.5px;
+    font-family:'Karla',sans-serif;font-weight:300;
+  }
+  input::placeholder,textarea::placeholder{color:rgba(251,241,238,0.4);}
+  select option{color:#2E1620;}
+  textarea{resize:vertical;min-height:82px;}
+  input:focus,select:focus,textarea:focus{outline:1px solid var(--rosegold);outline-offset:1px;}
+  .submit-btn{
+    margin-top:8px;background:var(--berry);color:var(--ivory);
+    border:none;padding:15px 26px;font-weight:500;font-size:13px;
+    text-transform:uppercase;letter-spacing:0.14em;
+    cursor:pointer;font-family:'Karla',sans-serif;
+  }
+  .submit-btn:hover{background:#DB4F6E;}
+  .form-note{font-size:11.5px;color:rgba(251,241,238,0.55);margin-top:12px;line-height:1.6;}
+  .google-form-wrap{
+    background:var(--ivory);
+    border:1px solid var(--rosegold);
+    padding:6px;
+  }
+  .google-form-wrap iframe{
+    display:block;background:var(--ivory);
+  }
+  #confirm{
+    display:none;background:rgba(201,161,90,0.16);
+    border:1px solid var(--rosegold);color:var(--rosegold-light);
+    padding:15px 17px;font-size:14px;margin-top:4px;
+  }
+
+  footer{
+    padding:36px 28px;text-align:center;
+    background:var(--ivory);
+  }
+  footer .tagline{
+    font-family:'Prata',serif;
+    font-size:16px;color:var(--plum);margin-bottom:10px;
+  }
+  footer .legal{font-size:12px;color:var(--ink-soft);}
+
+  @media (prefers-reduced-motion: no-preference){
+    .card{transition:transform .2s ease, box-shadow .2s ease;}
+    .card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(14,59,46,0.16);}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-left">
+    <div class="nav-photo"><span>Photo</span></div>
+    <div class="nav-id">
+      <div class="brand">Margaret <span>Theresa</span></div>
+      <div class="ren-badge">REN06675</div>
+    </div>
+  </div>
+  <a class="cta" href="#lead-form">Enquire</a>
+</nav>
+
+<section class="hero">
+  <div class="frame-rule"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="eyebrow small-caps">Exclusive &middot; KLCC, Pavilion &amp; Bukit Ceylon</div>
+      <h1>Prime addresses for those who expect more</h1>
+      <p>A curated portfolio of luxury condominiums and commercial addresses in Kuala Lumpur's most sought-after districts, trusted by an international, discerning clientele. Registered Real Estate Negotiator (REN06675), IQI Realty Sdn. Bhd. (KLCC).</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#lead-form">Arrange a private viewing</a>
+        <a class="btn-ghost" href="#portfolio">View the portfolio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="portfolio">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="small-caps">The portfolio</div>
+      <h2>Residences & addresses, selected with care</h2>
+      <p>Every listing below is personally represented. Full particulars, floor plans and private viewings available on request.</p>
+    </div>
+
+    <div class="portfolio-group">
+      <h3>Signature residences</h3>
+      <div class="listings">
+        <div class="card"><div class="card-inner">
+          <div class="card-photo"><span>Photo on request</span></div>
+          <div class="card-body">
+            <div class="card-tags"><span class="tag-chip sale">For sale</span></div>
+            <h3>ViPod Residences, KLCC</h3>
+            <div class="card-meta"><span>Condominium</span><span>1,299 sqft</span></div>
+            <div class="card-price">RM 1,850,000</div>
+          </div>
+        </div></div>
+
+        <div class="card"><div class="card-inner">
+          <div class="card-photo"><span>Photo on request</span></div>
+          <div class="card-body">
+            <div class="card-tags"><span class="tag-chip sale">For sale</span></div>
+            <h3>Verticas Residensi, Bukit Ceylon</h3>
+            <div class="card-meta"><span>Condominium</span><span>1,468 sqft</span></div>
+            <div class="card-price">RM 1,900,000</div>
+          </div>
+        </div></div>
+
+        <div class="card"><div class="card-inner">
+          <div class="card-photo"><span>Photo on request</span></div>
+          <div class="card-body">
+            <div class="card-tags"><span class="tag-chip rent">For rent</span></div>
+            <h3>One Residency, Jalan Bukit Ceylon</h3>
+            <div class="card-meta"><span>Condominium</span><span>858 sqft</span></div>
+            <div class="card-price">RM 3,000 / mo</div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="portfolio-group">
+      <h3>Commercial addresses</h3>
+      <div class="listings">
+        <div class="card"><div class="card-inner">
+          <div class="card-photo"><span>Photo on request</span></div>
+          <div class="card-body">
+            <div class="card-tags"><span class="tag-chip sale">For sale</span></div>
+            <h3>Q Sentral, Kuala Lumpur Sentral</h3>
+            <div class="card-meta"><span>Commercial office</span><span>4,187 sqft</span></div>
+            <div class="card-price">RM 6,908,550</div>
+          </div>
+        </div></div>
+
+        <div class="card"><div class="card-inner">
+          <div class="card-photo"><span>Photo on request</span></div>
+          <div class="card-body">
+            <div class="card-tags"><span class="tag-chip sale">For sale</span></div>
+            <h3>Plaza Sentral, Jalan Stesen Sentral 5</h3>
+            <div class="card-meta"><span>Commercial office</span><span>3,830 sqft</span></div>
+            <div class="card-price">RM 4,213,000</div>
+          </div>
+        </div></div>
+
+        <div class="card"><div class="card-inner">
+          <div class="card-photo"><span>Photo on request</span></div>
+          <div class="card-body">
+            <div class="card-tags"><span class="tag-chip rent">For rent</span></div>
+            <h3>TTDI Retail Shoplot, Taman Tun Dr Ismail</h3>
+            <div class="card-meta"><span>Retail</span><span>3,261 sqft</span></div>
+            <div class="card-price">RM 24,000 / mo</div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><h3>Since 2016</h3><p>Registered REN, IQI Realty (KLCC)</p></div>
+    <div class="trust-item"><h3>Residential</h3><p>Luxury condominiums, KLCC & Bukit Ceylon</p></div>
+    <div class="trust-item"><h3>Commercial</h3><p>Office & retail addresses, city centre</p></div>
+    <div class="trust-item"><h3>&lt; 1 hour</h3><p>Typical response time to new enquiries</p></div>
+  </div>
+</section>
+
+<section class="form-section" id="lead-form">
+  <div class="form-inner">
+    <div>
+      <div class="small-caps">Private enquiry</div>
+      <h2>Let's discuss what you're looking for</h2>
+      <p class="lead-copy">Whether it's a residence near KLCC or a commercial address for your business, share a few details and I'll follow up personally, usually within the hour.</p>
+      <div class="contact-line">Prefer to talk now? <a href="https://api.whatsapp.com/send?phone=60126159373&text=Hi%20Margaret%2C%20I%20came%20across%20your%20landing%20page%20and%20would%20like%20to%20know%20more.">WhatsApp +6012-615 9373</a></div>
+    </div>
+
+    <div>
+      <div class="google-form-wrap">
+        <!--
+          STEP 1: Create your Google Form (see the guide) with matching fields.
+          STEP 2: Click "Send" on the form, choose the "<>" embed tab, copy the iframe code.
+          STEP 3: Replace the src URL below with your form's real embed URL.
+        -->
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScqyyIjhuPYKiFNzX8biQ7UgiH03DesOXmI4Dx6ZDuq3wro-g/viewform?embedded=true"
+          width="100%"
+          height="1737"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0">
+          Loading enquiry form...
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="tagline">Attentive support, from first enquiry through closing.</div>
+  <div class="legal">&copy; <span id="year"></span> Margaret Theresa &middot; IQI Realty Sdn. Bhd. (KLCC) &middot; E(1)1584/2 &middot; REN06675</div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
